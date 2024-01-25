@@ -2,15 +2,21 @@
 
 # Problem Requirements Document
 
+### What do we have?
+
 Our Organisation. Voice and text messages, data transfers via internet and local network.
 
 Currently we use only network IP system for communication (phones, data transfering etc). So that, we have to support users and maintain this complicated network and telecomunication system. So that it is mandatory point to have as much as it is possible information about network throughput and availability of different end-points (PC, Routers).
 
-Now, due to lack of appropriate programs we use command line interface (terminal on OS Windows 10) and `ping xxx.xxx.xxx.xxx -t` command
+Now, due to lack of appropriate programs we use command line interface (terminal on OS Windows 10) and `ping xxx.xxx.xxx.xxx -t` command. It show us availability (in case there is a response) and latency.
 
-We need to understand when network goes down and device is unreachable.
+### What do we need?
 
-Requirements:
+It is too difficult to set up new window (terminal) with needed parameters, especially when we want to observe dozen endpoints (IPs). To simplify this process we want to run all-in-one application, window, process, whatever.
+
+Would be good to have some target endpoints, addresses, IPs in some storage, like file, DataBase etc. This would allow all users to be envolved into this process.
+
+### Requirements:
 
 1. Works on local PC.
 2. Can follow/observe multiple devices by IP address or domain name
