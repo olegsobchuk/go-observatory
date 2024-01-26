@@ -10,17 +10,21 @@ What is the status, such as proposed, accepted, rejected, deprecated, superseded
 
 What is the issue that we're seeing that is motivating this decision or change?
 
-## Decision
+## In consideration
+
+The list of possible decisions with a small descriptions or detailes.
+
+## Decision :star:
 
 What is the change that we're proposing and/or doing?
 
 ## Positive Consequences
 
-What becomes easier or more difficult to do because of this change?
+What becomes easier to do because of this change?
 
 ## Negative Consequences
 
-What could be more dificult or complicated.
+What becomes more difficult or complicated to do because of this change?
 
 ## Links
 
