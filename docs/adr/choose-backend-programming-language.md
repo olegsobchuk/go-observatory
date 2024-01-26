@@ -1,7 +1,7 @@
 [OBSERVATORY LANDING PAGE](../../README.md) | [TO ADRs List](./index.md)
 
 ### Title
-# Choose back-end Program Language (Jan 26, 2024)
+# Choose Backend Program Language (Jan 26, 2024)
 
 ## Status
 
