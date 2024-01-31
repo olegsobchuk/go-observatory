@@ -26,9 +26,38 @@ Application plays multiple roles:
 #### Layered architecture.
 
 Consists of the next layers:
-- web server (set up new endpoints, use web page to present a result)
+- HTTP server (set up new endpoints, route web pages to present a result)
 - worker (due to a list of endpoints it makes calls) and passes information to a storage. Computes results.
 - presenter (view) (draws results as a chart(s) and/or statuses for appropriate endpoints)
+- storage
+
+Each layer works independently with personal role and responsibility.
+
+- HTTP server layer is a server module.
+
+Resposibility: route HTTP requests, process server information (server status, logs, etc.), render UI templates, connects to the storage for getting needed information for representation.
+
+- worker layer is a worker module
+
+Resposibility: according to configuration list it makes requests to appropriate endpoints/IPs, calculate and send needed information to the storage.
+
+- presenter layer - ui module
+
+Is a module which consists of HTML pages.
+
+Resposibility: render onformation from the storage.
+
+- storage is a storage module
+
+In memory collection or file with appropriate data. It should be restricted with allocated memory. The size will be discussed.
+
+Responsibility: collect data in specific order and evict old data.
+
+## Schemas
+
+![Config](../imgs/observatory_config.png)
+![Worker](../imgs/observatory_worker.png)
+![Presenter](../imgs/observatory_presenter.png)
 
 
 ## Positive Consequences
