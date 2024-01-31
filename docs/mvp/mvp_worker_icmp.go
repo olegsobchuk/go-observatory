@@ -26,7 +26,7 @@ func PingPongICMP() {
 	go func() {
 		for {
 			rb := make([]byte, 1500)
-			conn.SetReadDeadline(time.Now().Add(2 * time.Second))
+			_ = conn.SetReadDeadline(time.Now().Add(2 * time.Second))
 			_, _, err := conn.ReadFrom(rb)
 			if err != nil {
 				log.Fatal(err)
