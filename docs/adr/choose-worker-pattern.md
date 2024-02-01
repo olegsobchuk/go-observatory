@@ -1,33 +1,42 @@
 [OBSERVATORY LANDING PAGE](../../README.md) | [TO ADRs List](./index.md)
 
-### Choose Worker Pattern
+### Choose Worker Design Pattern
 
 This document describes Worker's steps for work.
 
 ## Status
 
-What is the status, such as proposed, **accepted**, rejected, deprecated, superseded, etc.?
+What is the status, such as **proposed**, accepted, rejected, deprecated, superseded, etc.?
 
 ## Context
 
-What is the issue that we're seeing that is motivating this decision or change?
+Worker instance gets all configs from store and applies them.
 
 ## In consideration
 
-The list of possible decisions with a small descriptions or detailes.
+We consider next patterns:
+- Creational Design Pattern:
+  - singleton;
+  - factory;
+  - abstract factory.
+- Behavioral Design Patterns:
+  - mediator;
+  - iterator.
+- Structural Design Patterns:
+  - bridge.
 
 ## Decision :star:
 
-What is the change that we're proposing and/or doing?
+To Do
 
 ## Positive Consequences
 
-What becomes easier to do because of this change?
+\-
 
 ## Negative Consequences
 
-What becomes more difficult or complicated to do because of this change?
+\-
 
 ## Links
 
-Links to related ADR(s)
+\-
