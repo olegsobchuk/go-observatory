@@ -18,7 +18,7 @@ Application plays multiple roles:
 ## In consideration
 
 1. Layered architecture
-2. MVP - rejected. (MVP is too complicated for this application, hence it will be difficult develop it and use it as a portable application)
+2. MVC - rejected. (MVC is too complicated for this application, hence it will be difficult develop it and use it as a portable application)
 3. Service-oriented architecture - rejected. (excessive for this purpose)
 
 ## Decision :star:

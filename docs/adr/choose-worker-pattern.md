@@ -27,11 +27,14 @@ We consider next patterns:
 
 ## Decision :star:
 
-To Do
+Now we have very simple application, so we don't need to think over something very complicated.
+
+It will be just simple service with several functions to retrieve and store data.
+
 
 ## Positive Consequences
 
-\-
+One file, simple service
 
 ## Negative Consequences
 
