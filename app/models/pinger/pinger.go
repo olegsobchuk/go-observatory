@@ -1,7 +1,6 @@
 package pinger
 
 import (
-	"fmt"
 	"net"
 	"time"
 )
@@ -9,16 +8,17 @@ import (
 const ADDR = "google.com"
 
 type Pinger struct {
-	dst        string
-	ip net.IP
+	Dst        string
+	IP         net.IP
 	startedAt  time.Time
 	finishedAt time.Time
 }
 
 func (pngr *Pinger) Ping() {
-	pngr.ResolveArrr()
+	// TODO: implement
 }
 
-func (pngr *Pinger) {
-	ips
+func (pngr Pinger) Latency() time.Duration {
+	duration := pngr.finishedAt.Sub(pngr.startedAt)
+	return duration
 }
