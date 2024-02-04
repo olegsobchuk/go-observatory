@@ -1,6 +1,7 @@
 package main
 
 import (
+	pingerino "go-observatory/app/services"
 	"log"
 
 	"github.com/gofiber/fiber/v3"
@@ -18,6 +19,11 @@ func main() {
 	app.Get("/", func(c fiber.Ctx) error {
 		return c.SendString("Hello world!")
 	})
+
+	pingerino.Prepare([]string{"142.250.180.238"})
+	for _, pngr := range pingerino.Pingers {
+		pingerino.PingPong(&pngr)
+	}
 
 	log.Fatal(app.Listen(":3000"))
 }
