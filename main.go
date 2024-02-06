@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	pingerino "go-observatory/app/services"
 	"log"
 
@@ -20,9 +21,10 @@ func main() {
 		return c.SendString("Hello world!")
 	})
 
-	pingerino.Prepare([]string{"142.250.180.238"})
+	pingerino.Prepare([]string{"ukr.net"})
 	for _, pngr := range pingerino.Pingers {
-		pingerino.PingPong(&pngr)
+		fmt.Printf("Start - %s\n", pngr.IP.String())
+		pingerino.Ping(&pngr)
 	}
 
 	log.Fatal(app.Listen(":3000"))

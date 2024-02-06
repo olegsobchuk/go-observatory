@@ -8,12 +8,12 @@ import (
 const ADDR = "google.com"
 
 type Pinger struct {
-	TimeAlive  uint8
-	Payload    uint32
-	Dst        string
-	IP         net.IP
-	startedAt  time.Time
-	finishedAt time.Time
+	TimeAlive   uint8
+	PayloadSize uint32
+	Dst         string
+	IP          net.IP
+	startedAt   time.Time
+	finishedAt  time.Time
 }
 
 func (pngr *Pinger) Ping() {
