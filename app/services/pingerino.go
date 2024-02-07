@@ -27,6 +27,7 @@ func Ping(pngr *pinger.Pinger) error {
 	// TODO: remove it from here
 	pngr.TimeAlive = 2
 
+	pngr.StartedAt = time.Now()
 	conn, err := net.DialTimeout("tcp", pngr.Dst+":80", time.Duration(pngr.TimeAlive)*time.Second)
 	if err != nil {
 		log.Printf("Dial error: %s %s \n", pngr.IP, err)
@@ -46,6 +47,7 @@ func Ping(pngr *pinger.Pinger) error {
 		log.Printf("Sending error: %s %s \n", pngr.IP, err)
 		return err
 	}
+	pngr.FinishedAt = time.Now()
 
 	// resp := make([]byte, pngr.PayloadSize)
 	// conn.SetReadDeadline(time.Now().Add(2 * time.Second))
