@@ -24,7 +24,10 @@ func main() {
 	pingerino.Prepare([]string{"ukr.net"})
 	for _, pngr := range pingerino.Pingers {
 		fmt.Printf("Start - %s\n", pngr.IP.String())
-		pingerino.Ping(&pngr)
+		err := pingerino.Ping(&pngr)
+		if err != nil {
+			continue
+		}
 	}
 
 	log.Fatal(app.Listen(":3000"))

@@ -1,7 +1,6 @@
 package pingerino
 
 import (
-	"fmt"
 	"go-observatory/app/models/pinger"
 	"log"
 	"net"
@@ -48,15 +47,15 @@ func Ping(pngr *pinger.Pinger) error {
 		return err
 	}
 
-	resp := make([]byte, pngr.PayloadSize)
-	conn.SetReadDeadline(time.Now().Add(2 * time.Second))
-	_, err = conn.Read(resp)
-	if err != nil {
-		log.Printf("Reading error: %s %s \n", pngr.IP, err)
-		return err
-	}
+	// resp := make([]byte, pngr.PayloadSize)
+	// conn.SetReadDeadline(time.Now().Add(2 * time.Second))
+	// _, err = conn.Read(resp)
+	// if err != nil {
+	// 	log.Printf("Reading error: %s %s \n", pngr.IP, err)
+	// 	return err
+	// }
 
-	fmt.Printf("Resp - %s", resp)
+	// fmt.Printf("Resp - %s", resp)
 
 	return nil
 }
