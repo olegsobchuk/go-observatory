@@ -1,7 +1,6 @@
 package pinger
 
 import (
-	"net"
 	"time"
 )
 
@@ -11,7 +10,8 @@ type Pinger struct {
 	TimeAlive   uint8
 	PayloadSize uint32
 	Dst         string
-	IP          net.IP
+	Port        uint16
+	Alias       string
 	StartedAt   time.Time
 	FinishedAt  time.Time
 }

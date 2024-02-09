@@ -21,9 +21,8 @@ func main() {
 		return c.SendString("Hello world!")
 	})
 
-	pingerino.Prepare([]string{"ukr.net"})
 	for _, pngr := range pingerino.Pingers {
-		fmt.Printf("Start - %s\n", pngr.IP.String())
+		fmt.Printf("Start - %s\n", pngr.Alias)
 		err := pingerino.Ping(&pngr)
 		if err != nil {
 			continue
