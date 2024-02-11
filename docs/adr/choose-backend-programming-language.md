@@ -1,7 +1,6 @@
-[OBSERVATORY LANDING PAGE](../../README.md) | [TO ADRs List](./index.md)
-
-### Title
 # Choose Backend Program Language (Jan 26, 2024)
+
+[OBSERVATORY LANDING PAGE](../../README.md) | [TO ADRs List](./index.md)
 
 ## Status
 
@@ -10,6 +9,7 @@ proposed, **accepted**, rejected, deprecated, superseded
 ## Context
 
 We have to choose the program language for futher developing. Program language should meet requirements:
+
 - popular;
 - well known or at least it is not hard to figure out in the code;
 - better to have executable file for whole application;
@@ -17,36 +17,36 @@ We have to choose the program language for futher developing. Program language s
 ## In consideration
 
 Due to I'm only one who is working on this progect, I'm considering the next program languages:
-1. Ruby (pure Ruby or Sinatra framework) - rejected.
 
-  \+ easy to learn and understand;
+1. Ruby (pure Ruby or Sinatra framework) - rejected:
 
-  \- slow;
+    \+ easy to learn and understand;
 
-  \- not compilable, so it is easy to brake code or add there Malware.
+    \- slow;
 
-2. Golang (Fiber or Echo frameworks).
+    \- not compilable, so it is easy to brake code or add there Malware.
 
-  \+ easy to learn and understand;
+2. Golang (Fiber or Echo frameworks):
 
-  \+ fast;
+    \+ easy to learn and understand;
 
-  \+ compilable;
+    \+ fast;
 
-  \- requires developers with specific knowlage in this language;
+    \+ compilable;
 
-3. Javascript (NextJS & ExpressJS) - rejected.
+    \- requires developers with specific knowlage in this language;
 
-  \+ easy to learn and understand;
+3. Javascript (NextJS & ExpressJS) - rejected:
 
-  \- not compilable, so it is easy to brake code or add there Malware.
+    \+ easy to learn and understand;
 
-  \- requires developers with specific knowlage in these frameworks;
+    \- not compilable, so it is easy to brake code or add there Malware.
+
+    \- requires developers with specific knowlage in these frameworks;
 
 ## Decision :star:
 
 Golang on Fiber framework
-
 
 ## Positive Consequences
 

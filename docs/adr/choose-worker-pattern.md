@@ -1,6 +1,6 @@
-[OBSERVATORY LANDING PAGE](../../README.md) | [TO ADRs List](./index.md)
+# Choose Worker Design Pattern
 
-### Choose Worker Design Pattern
+[OBSERVATORY LANDING PAGE](../../README.md) | [TO ADRs List](./index.md)
 
 This document describes Worker's steps for work.
 
@@ -15,6 +15,7 @@ Worker instance gets all configs from store and applies them.
 ## In consideration
 
 We consider next patterns:
+
 - Creational Design Pattern:
   - singleton;
   - factory;
@@ -30,7 +31,6 @@ We consider next patterns:
 Now we have very simple application, so we don't need to think over something very complicated.
 
 It will be just simple service with several functions to retrieve and store data.
-
 
 ## Positive Consequences
 

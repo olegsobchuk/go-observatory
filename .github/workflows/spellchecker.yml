@@ -1,6 +1,11 @@
 # Adapted from https://github.com/marketplace/actions/spellchecker-cli
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ "master"]
+  pull_request:
+    branches: [ "**" ] # all branches
+
 jobs:
   spellcheck:
     runs-on: ubuntu-latest

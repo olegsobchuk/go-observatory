@@ -1,6 +1,8 @@
+# Problem Requirements Document
+
 [OBSERVATORY LANDING PAGE](../README.md)
 
-# Problem Requirements Document
+## CONTENT
 
 ### What do we have?
 
@@ -12,11 +14,11 @@ Now, due to a lack of appropriate programs, we use the command line interface (t
 
 ### What do we need?
 
-It is too difficult to set up a new window (terminal) with needed parameters, especially when we want to observe dozens of endpoints (IPs). To simplify this process, we want to run an all-in-one application, window, process, or whatever.
+It is too difficult to set up a new window (terminal) with needed parameters, especially when we want to observe dozens of endpoints (IP addresses). To simplify this process, we want to run an all-in-one application, window, process, or whatever.
 
-It would be good to have some target endpoints, addresses, IPs in some storage, like a file, database, etc. This would allow all users to be involved in this process.
+It would be good to have some target endpoints, addresses, IP addresses in some storage, like a file, database, etc. This would allow all users to be involved in this process.
 
-### Requirements:
+### Requirements
 
 1. Works on a local PC.
 2. Can follow/observe multiple devices by IP address or domain name

@@ -1,6 +1,6 @@
-[OBSERVATORY LANDING PAGE](../../README.md) | [TO ADRs List](./index.md)
+# Title
 
-### Title
+[OBSERVATORY LANDING PAGE](../../README.md) | [TO ADRs List](./index.md)
 
 ## Status
 
