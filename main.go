@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	pingerino "go-observatory/app/services"
+	pingerino "go-observatory/app/services/pingerino"
 	"log"
 
 	"github.com/gofiber/fiber/v3"
@@ -21,6 +21,8 @@ func main() {
 		return c.SendString("Hello world!")
 	})
 
+	// payload := []byte(`[{"destination": "ukr.net", "port": "80"}]`)
+	// storage.Place()
 	for _, pngr := range pingerino.Pingers {
 		fmt.Printf("Start - %s\n", pngr.Alias)
 		err := pingerino.Ping(&pngr)

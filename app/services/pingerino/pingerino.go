@@ -8,15 +8,16 @@ import (
 	"time"
 )
 
-// TODO: Move to dedicated function or service. For now this is only for MVP
-var pngr = pinger.Pinger{Dst: "ukr.net", Alias: "test", Port: 80}
-var Pingers = []pinger.Pinger{pngr}
+var Pingers []pinger.Pinger
+
+func Prepare() {
+	var pngr = pinger.Pinger{Dst: "ukr.net", Alias: "test", Port: 80}
+	pngr.TimeAlive = 2
+	pngr.PayloadSize = 1300
+	Pingers = append(Pingers, pngr)
+}
 
 func Ping(pngr *pinger.Pinger) error {
-	// Set default walue for now
-	// TODO: remove it from here
-	pngr.TimeAlive = 2
-
 	pngr.StartedAt = time.Now()
 	conn, err := net.DialTimeout("tcp", pngr.Dst+":80", time.Duration(pngr.TimeAlive)*time.Second)
 	if err != nil {
@@ -25,13 +26,7 @@ func Ping(pngr *pinger.Pinger) error {
 	}
 	defer conn.Close()
 
-	// Set Payload default value for now
-	// TODO: remove it from here
-	pngr.PayloadSize = 1300
-
 	payload := make([]byte, pngr.PayloadSize)
-	// Set information to payload variable
-	// copy(payload[:len(pngr.Dst)], pngr.Dst)
 	_, err = conn.Write(payload)
 	if err != nil {
 		log.Printf("Sending error: %s %s \n", pngr.Alias, err)

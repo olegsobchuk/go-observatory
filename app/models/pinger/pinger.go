@@ -9,9 +9,9 @@ const ADDR = "google.com"
 type Pinger struct {
 	TimeAlive   uint8
 	PayloadSize uint32
-	Dst         string
-	Port        uint16
-	Alias       string
+	Dst         string `json:"destination,omitempty"`
+	Port        uint16 `json:"port,omitempty"`
+	Alias       string `json:"alias,omitempty"`
 	StartedAt   time.Time
 	FinishedAt  time.Time
 }
