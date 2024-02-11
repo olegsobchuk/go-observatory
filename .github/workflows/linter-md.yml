@@ -1,7 +1,11 @@
 # Adapted from https://github.com/DavidAnson/markdownlint-cli2-action/blob/main/.github/workflows/example.yml
 
 name: markdownlint
-on: [push, pull_request]
+on:
+  push:
+    branches: [ "master"]
+  pull_request:
+    branches: [ "**" ] # all branches
 
 jobs:
   markdownlint:

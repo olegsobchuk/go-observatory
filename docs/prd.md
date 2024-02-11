@@ -2,7 +2,7 @@
 
 [OBSERVATORY LANDING PAGE](../README.md)
 
-## COMNTENT
+## CONTENT
 
 ### What do we have?
 
