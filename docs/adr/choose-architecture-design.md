@@ -1,7 +1,6 @@
-[OBSERVATORY LANDING PAGE](../../README.md) | [TO ADRs List](./index.md)
-
-### Title
 # Choose Architecture Design (Jan 26, 2024)
+
+[OBSERVATORY LANDING PAGE](../../README.md) | [TO ADRs List](./index.md)
 
 ## Status
 
@@ -10,6 +9,7 @@ proposed, **accepted**, rejected, deprecated, superseded
 ## Context
 
 Application plays multiple roles:
+
 - Worker. It makes calls to multiples endpoints in the same time and throug out long period of time.
 - Storage. It collects all needed information localy or in the memory.
 - Analizer. It compute and group needed information according to needes.
@@ -23,9 +23,10 @@ Application plays multiple roles:
 
 ## Decision :star:
 
-#### Layered architecture.
+Choosen decision is **Layered architecture**.
 
 Consists of the next layers:
+
 - HTTP server (set up new endpoints, route web pages to present a result)
 - worker (due to a list of endpoints it makes calls) and passes information to a storage. Computes results.
 - presenter (view) (draws results as a chart(s) and/or statuses for appropriate endpoints)
@@ -58,7 +59,6 @@ Responsibility: collect data in specific order and evict old data.
 ![Config](../imgs/observatory_config.png)
 ![Worker](../imgs/observatory_worker.png)
 ![Presenter](../imgs/observatory_presenter.png)
-
 
 ## Positive Consequences
 
