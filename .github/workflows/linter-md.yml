@@ -1,0 +1,15 @@
+# Adapted from https://github.com/DavidAnson/markdownlint-cli2-action/blob/main/.github/workflows/example.yml
+
+name: markdownlint
+on: [push, pull_request]
+
+jobs:
+  markdownlint:
+    name: markdownlint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: DavidAnson/markdownlint-cli2-action@v15
+        with:
+          globs: '**/*.md'

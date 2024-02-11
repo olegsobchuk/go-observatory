@@ -1,0 +1,13 @@
+# Adapted from https://github.com/marketplace/actions/spellchecker-cli
+
+on: [push, pull_request]
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+    name: Spellcheck
+    steps:
+      - uses: actions/checkout@v4
+      - uses: tbroadley/spellchecker-cli-action@v1
+        with:
+          files: "**/*.md !build/*.md"
+          quiet: true
