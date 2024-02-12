@@ -4,23 +4,38 @@
 
 ## Status
 
-What is the status, such as proposed, accepted, rejected, deprecated, superseded, etc.?
+**proposed**, accepted, rejected, deprecated, superseded
 
 ## Context
 
-What is the issue that we're seeing that is motivating this decision or change?
+We need to have storage to collect and keep information about targets (IP addresses or hosts). User will be able to send information (IP or host name, port, etc.) through our endpoint and web layer should be able to retain it somewhere. And this information should be able on demand.
+
+Requirements:
+
+1. it is easy to implement;
+2. data from user is passed to this storage
+3. data in storage should be changed with the next user's request with new data
+4. storage collects only valid information
+5. storage has multiple buckets:
+
+    - information about target;
+    - information about results;
 
 ## In consideration
 
-The list of possible decisions with a small descriptions or detailes.
+- in application (runtime) memory;
+- database - declined;
+- browser local storage declined, but we can return to this in future;
 
 ## Decision :star:
 
-What is the change that we're proposing and/or doing?
+For now it is **in application memory**
 
 ## Positive Consequences
 
-What becomes easier to do because of this change?
+- we don't need any additional application;
+- the simplest way for implementation;
+- we can use in different browsers;
 
 ## Negative Consequences
 
