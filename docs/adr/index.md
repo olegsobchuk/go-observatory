@@ -9,3 +9,4 @@
 - [Choose Architecture Design](./choose-architecture-design.md)
 - [Choose Worker Protocol](./choose-worker-protocol.md)
 - [Choose Worker Design Pattern](./choose-worker-pattern.md)
+- [Choose storage design](./choose-storage-design.md)
