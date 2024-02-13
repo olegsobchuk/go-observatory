@@ -39,7 +39,7 @@ For now it is **in application memory**
 
 ## Negative Consequences
 
-What becomes more difficult or complicated to do because of this change?
+- all data is lost on reload application
 
 ## Links
 
