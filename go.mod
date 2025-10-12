@@ -4,7 +4,7 @@ go 1.21.6
 
 require (
 	github.com/gofiber/fiber/v2 v2.52.9
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.11.1
 	golang.org/x/net v0.19.0
 )
 
