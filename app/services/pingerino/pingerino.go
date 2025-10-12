@@ -24,7 +24,11 @@ func Ping(pngr *pinger.Pinger) error {
 		log.Printf("Dial error: %s %s \n", pngr.Alias, err)
 		return err
 	}
-	defer conn.Close()
+	defer func() {
+		if err := conn.Close(); err != nil {
+			log.Printf("Close connection error: %s %s \n", pngr.Alias, err)
+		}
+	}()
 
 	payload := make([]byte, pngr.PayloadSize)
 	_, err = conn.Write(payload)
