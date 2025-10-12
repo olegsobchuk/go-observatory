@@ -15,7 +15,11 @@ func PingPongUDP() {
 	if err != nil {
 		log.Fatalf("Dial error - %s \n", err)
 	}
-	defer conn.Close()
+	defer func() {
+		if err := conn.Close(); err != nil {
+			log.Printf("PingPongUDP: Close connection error: %s \n", err)
+		}
+	}()
 	payload := make([]byte, 1300)
 	n, err := conn.Write(payload)
 	if err != nil {

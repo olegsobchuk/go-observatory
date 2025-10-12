@@ -20,7 +20,11 @@ func PingPongICMP() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer conn.Close()
+	defer func() {
+		if err := conn.Close(); err != nil {
+			log.Printf("PingPongICMP: Close connection error: %s \n", err)
+		}
+	}()
 	log.Println("Listen")
 
 	go func() {
